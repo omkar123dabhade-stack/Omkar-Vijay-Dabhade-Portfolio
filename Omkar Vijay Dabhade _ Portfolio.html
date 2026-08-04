@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Vijay Dabhade | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0f172a',
+                        neonCyan: '#00f2fe',
+                        neonBlue: '#4facfe',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Glassmorphism & Animations -->
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass-nav { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .neon-text { background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .neon-shadow { box-shadow: 0 0 30px rgba(0, 242, 254, 0.3); }
+        .hover-neon:hover { box-shadow: 0 0 20px rgba(79, 172, 254, 0.5); border-color: #4facfe; }
+        
+        /* Scroll Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Floating Animation */
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="antialiased selection:bg-neonCyan selection:text-darkBg">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold tracking-tighter neon-text">Omkar.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
+                <a href="#about" class="hover:text-neonCyan transition">About</a>
+                <a href="#projects" class="hover:text-neonCyan transition">Projects</a>
+                <a href="#media" class="hover:text-neonCyan transition">Media</a>
+                <a href="#contact" class="hover:text-neonCyan transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="fade-up space-y-6">
+                <h2 class="text-lg text-neonCyan font-semibold tracking-wide uppercase">Hi, I'm</h2>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                    <span class="neon-text">Omkar Vijay Dabhade</span>
+                </h1>
+                <p class="text-2xl text-gray-300 font-medium">
+                    Bridging the Gap Between Software Intelligence and Hardware Execution.
+                </p>
+                <p class="text-gray-400 text-lg">Engineering Student | Data Scientist | Robotics Builder</p>
+                
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="bg-gradient-to-r from-neonCyan to-neonBlue text-darkBg font-bold py-3 px-8 rounded-full hover:opacity-90 transition transform hover:scale-105">Explore My Work</a>
+                    <a href="#contact" class="border border-neonBlue text-neonBlue font-bold py-3 px-8 rounded-full hover:bg-neonBlue hover:text-darkBg transition">Let's Connect</a>
+                </div>
+            </div>
+            
+            <div class="fade-up flex justify-center md:justify-end">
+                <div class="relative animate-float">
+                    <div class="absolute inset-0 bg-gradient-to-r from-neonCyan to-neonBlue rounded-full blur-2xl opacity-40"></div>
+                    <img src="Omkar%20Dabhade%20formal%20photo%2025%20kb.jpg" alt="Omkar Vijay Dabhade" class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-2 border-neonCyan neon-shadow" onerror="this.src='https://media.licdn.com/dms/image/v2/D5603AQE6C9_HXAgpRQ/profile-displayphoto-crop_800_800/B56Z6LrweYKMAI-/0/1780459967196?e=1787184000&v=beta&t=6CKAWnBVRg8X1pGVElxZtR0sHCFEg_tTGYLKOe8nRCk'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12"><span class="neon-text">01.</span> The Journey & Arsenal</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 flex flex-col items-center text-center space-y-4">
+                    <img src="Omkar%20Dabhade%20formal%20photo%2025%20kb.jpg" alt="Omkar" class="w-32 h-32 rounded-full border-2 border-gray-700 object-cover" onerror="this.src='https://media.licdn.com/dms/image/v2/D5603AQE6C9_HXAgpRQ/profile-displayphoto-crop_800_800/B56Z6LrweYKMAI-/0/1780459967196?e=1787184000&v=beta&t=6CKAWnBVRg8X1pGVElxZtR0sHCFEg_tTGYLKOe8nRCk'">
+                    <div>
+                        <h3 class="text-xl font-bold">Omkar Vijay Dabhade</h3>
+                        <p class="text-neonCyan text-sm"><i class="fas fa-map-marker-alt mr-2"></i>Pimpri-Chinchwad, Maharashtra</p>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-2 space-y-8">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        I don't just write code; I build systems that interact with the real world. As an engineering student, my passion lies at the intersection of Artificial Intelligence, Data Science, and autonomous robotics. From training machine learning models to soldering circuitry, I am driven by a practical, builder's mindset.
+                    </p>
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Elite Education & Training</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start"><i class="fas fa-graduation-cap text-neonCyan mt-1 mr-3"></i> <div><strong>IIT Madras</strong> – BS in Data Science and Applications (Ongoing)</div></li>
+                            <li class="flex items-start"><i class="fas fa-certificate text-neonCyan mt-1 mr-3"></i> <div><strong>Corizo & IBM/Microsoft</strong> – National Level Data Science Training & Internship Program</div></li>
+                            <li class="flex items-start"><i class="fas fa-laptop-code text-neonCyan mt-1 mr-3"></i> <div><strong>IIT Madras (Swayam)</strong> – Certified AI & Machine Learning Specialist (Python)</div></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">Python</span>
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">C++</span>
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">Data Science</span>
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">AI / Machine Learning</span>
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">Robotics</span>
+                            <span class="px-4 py-2 glass-card rounded-full text-sm font-medium hover:border-neonCyan transition">Full-Stack Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 border-t border-gray-800 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12"><span class="neon-text">02.</span> The Proof (Projects)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card p-6 rounded-2xl hover-neon transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="fas fa-robot text-3xl text-neonCyan"></i>
+                        <a href="https://github.com/omkar123dabhade-stack/AI-Assistant-using-ollma-mistral-and-streamlit" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-neonCyan transition">Local AI Assistant</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Engineered a custom, locally-hosted AI assistant leveraging Ollama and the Mistral LLM, wrapped in a sleek Streamlit user interface for seamless interaction.
+                    </p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card p-6 rounded-2xl hover-neon transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="fas fa-satellite text-3xl text-neonBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-neonBlue transition">Bhavishika Aerospace</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Engineered a functional mini-satellite prototype and constructed a high-precision mini-telescope from the ground up, applying foundational aerospace physics and optical engineering.
+                    </p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card p-6 rounded-2xl hover-neon transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="fas fa-microchip text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition">TinyBots Architecture</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Designed and assembled custom autonomous and remote-controlled robotic vehicles. Developed seamless wireless communication protocols integrating smartphone interfaces with physical chassis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="py-24 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6"><span class="neon-text">03.</span> The Voice</h2>
+            <p class="text-gray-400 mb-12 text-lg">Demystifying the future of tech, one cup at a time.</p>
+            
+            <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 text-left hover-neon transition">
+                <img src="Gemini_Generated_Image_bemsi9bemsi9bems.png" alt="AI Coffee" class="w-32 h-32 rounded-full border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.4)]" onerror="this.src='https://yt3.ggpht.com/Qvign8MNyUUhMG0eTvJUDFso0Nhm_586vSoR7on13WV_6sMPryOm0Pg7coP7j6y3taYkE6Ac=s600-c-k-c0x00ffffff-no-rj-rp-mo'">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-2">AI Coffee <span class="text-sm bg-red-600 text-white px-2 py-1 rounded ml-2">YouTube</span></h3>
+                    <p class="text-gray-300 mb-6">A dedicated platform where I break down complex AI/ML algorithms, share engineering vlog updates, and explore modern tech trends.</p>
+                    <a href="https://www.youtube.com/@AI_Coffee" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition">
+                        <i class="fab fa-youtube mr-2"></i> Subscribe to Channel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 border-t border-gray-800 bg-slate-900/50">
+        <div class="max-w-3xl mx-auto text-center fade-up">
+            <h2 class="text-4xl font-bold mb-6">Let's Build the Future Together.</h2>
+            <p class="text-gray-400 mb-12 text-lg">Actively seeking opportunities for mentorship, hackathon collaborations, and impactful tech projects.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:omkar123dabhade@gmail.com" class="glass-card w-16 h-16 flex items-center justify-center rounded-full text-2xl hover:text-neonCyan hover-neon transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/omkar-vijay-dabhade-44334b2b5" target="_blank" class="glass-card w-16 h-16 flex items-center justify-center rounded-full text-2xl hover:text-blue-500 hover-neon transition">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/omkar123dabhade-stack" target="_blank" class="glass-card w-16 h-16 flex items-center justify-center rounded-full text-2xl hover:text-gray-300 hover-neon transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.youtube.com/@AI_Coffee" target="_blank" class="glass-card w-16 h-16 flex items-center justify-center rounded-full text-2xl hover:text-red-500 hover-neon transition">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <p class="text-gray-500 text-sm">© 2026 Omkar Vijay Dabhade. Engineered with Precision.</p>
+        </div>
+    </section>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
